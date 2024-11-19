@@ -1,0 +1,237 @@
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Host Grotesk', sans-serif;
+    overflow-x: hidden;
+    font-size: 20px;
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+p {
+    text-align: left; 
+}
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 40px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+
+/* Estilo para la sección de introducción */
+.intro-section {
+    background-image: url('../img/fondo.png');
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.intro-content {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 60px;
+    border-radius: 10px;
+    color: #000;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.519);
+}
+
+/* menu */
+
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    opacity: 0.9;
+
+}
+
+/* items del menu */
+
+#menu ul li {
+    background-color: #2e518b;
+}
+
+/* enlaces del menu */
+
+#menu ul a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 20px;
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
+    font-size: 1rem;
+}
+
+/* items del menu */
+
+#menu ul li {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+/* efecto al pasar el ratón por los items del menu */
+
+#menu ul li:hover {
+    background: #001d4b;
+}
+
+/* menu desplegable */
+
+#menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0;
+}
+
+/* items del menu desplegable */
+
+#menu ul ul li {
+    float: none;
+    width: 150px
+}
+
+/* enlaces de los items del menu desplegable */
+
+#menu ul ul a {
+    line-height: 120%;
+    padding: 10px 15px;
+}
+
+/* items del menu desplegable al pasar el ratón */
+
+#menu ul li:hover>ul {
+    display: block;
+}
+
+/* Estilos para el efecto parallax */
+.parallax {
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    transition: background-position 0.5s ease-out;
+}
+
+/* Estilos para el contenido */
+.content {
+    background-color: #2e0465;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 30px auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+
+
+
+
+
+
+
+
+.parallax.visible .content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Colores de fondo para cada sección */
+#presentacion {
+    background-color: #6757c2;
+}
+
+#introduccion {
+    background-color: #2e0465;
+}
+
+#objetivos {
+    background-color: #6757c2;
+}
+
+#estrategias {
+    background-color: #2e0465;
+}
+
+#pregunta {
+    background-color: #6757c2;
+}
+
+#conclusiones {
+    background-color: #2e0465;
+}
+
+#bibliografia {
+    background-color: #6757c2;
+}
+
+#mision {
+    background-color: #6757c2;
+}
+
+#vision {
+    background-color: #2e0465;
+}
+
+#principios {
+    background-color: #6757c2;
+}
+
+#valores {
+    background-color: #2e0465;
+}
+
+#bibliografia {
+    text-align: left; 
+}
+
+
+
+
