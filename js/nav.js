@@ -3,23 +3,49 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.getElementById('menu');
     const menuToggle = document.getElementById('menu-toggle');
 
+    const counters = document.querySelectorAll('.stat h4');
+    const speed = 1000; // Ajusta la velocidad de la animación
+
+
     // Desplazamiento suave al hacer clic en el menú
-    document.querySelectorAll('#menu a').forEach(anchor => {
+    document.querySelectorAll('a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-
-            window.scrollTo({
-                top: targetSection.offsetTop,
-                behavior: 'smooth'
-            });
-
-            // Ocultar el menú después de hacer clic en un enlace
-            if (window.innerWidth <= 768) {
-                navbar.classList.remove('active');
+            const href = this.getAttribute('href');
+            
+            if (href.startsWith('#')) { // Solo manejar desplazamiento si es un ID
+                e.preventDefault();
+                const targetId = href.substring(1);
+                const targetElement = document.getElementById(targetId);
+    
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    console.warn(`Elemento con id "${targetId}" no encontrado.`);
+                }
             }
         });
+    });
+
+
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+
+            const increment = target / speed;
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(updateCount, 20);
+            } else {
+                counter.innerText = target;
+            }
+        };
+
+        updateCount();
     });
 
     // Mostrar contenido con animación al hacer scroll

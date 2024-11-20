@@ -19,9 +19,6 @@ h2, h3 {
     font-weight: 700;
 }
 
-p {
-    text-align: left; 
-}
 
 
 ul {
@@ -157,7 +154,6 @@ li {
 
 /* Estilos para el contenido */
 .content {
-    background-color: #2e0465;
     padding: 20px;
     border-radius: 10px;
     max-width: 800px;
@@ -174,35 +170,33 @@ li {
 
 /* Colores de fondo para cada sección */
 #servicios {
-    background-color: #6757c2;
-}
-
-#portafolio {
     background-color: #2e0465;
 }
 
-#testimonios {
-    background-color: #6757c2;
+#portafolio {
+    background-color: #fff;
 }
+
+
 
 #contactenos {
     background-color: #2e0465;
 }
 
 #mision {
-    background-color: #6757c2;
+    background-color: #2e0465;
 }
 
 #vision {
-    background-color: #2e0465;
+    background-color: #ffffff;
 }
 
 #principios {
-    background-color: #6757c2;
+    background-color: #2e0465;
 }
 
 #valores {
-    background-color: #2e0465;
+    background-color: #fff;
 }
 
 /* Media Queries para responsividad */
@@ -288,3 +282,178 @@ li {
 }
 
 
+/* contadores */
+
+#contador {
+    color: #333;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#contador .content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#contador h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#contador h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#contador p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat h4 {
+    font-size: 65px;
+    color: #6757c2;
+    margin-bottom: 5px;
+}
+
+.stat p {
+    font-size: 16px;
+    color: #666;
+}
+
+
+
+#cfrio {
+    color: #000;
+    padding: 40px 20px;
+}
+
+.cfrio-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cfrio-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.cfrio-columns {
+    display: flex;
+    align-items: center;
+}
+
+.number {
+    font-size: 95px;
+    color: #6757c2;
+    margin-right: 10px; /* Espacio entre las columnas */
+}
+
+.title {
+    font-size: 24px;
+    text-align: left;
+}
+
+.cfrio-text {
+    max-width: 600px;
+    margin-left: 20px;
+}
+
+.cfrio-text h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.cfrio-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.cfrio-text p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.ver-mas {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.ver-mas:hover {
+    background-color: white;
+    color: #0a1a2b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 22%; /* Ajusta el ancho para cuatro columnas */
+    max-width: 22%; /* Asegura que cada tarjeta no exceda el 22% del ancho */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+    font-size: 40px;
+    color: #6757c2;
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+p {
+    font-size: 14px;
+    color: #666;
+}
