@@ -183,7 +183,7 @@ li {
     background-color: #2e0465;
 }
 
-#mision {
+#identidad {
     background-color: #2e0465;
 }
 
@@ -418,6 +418,13 @@ li {
 
 
 
+
+
+
+
+
+
+
 .card-container {
     display: flex;
     justify-content: space-between;
@@ -433,8 +440,8 @@ li {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex: 1 1 22%; /* Ajusta el ancho para cuatro columnas */
-    max-width: 22%; /* Asegura que cada tarjeta no exceda el 22% del ancho */
+    flex: 1 1 calc(25% - 20px); /* Cuatro columnas */
+    max-width: calc(25% - 20px); /* Asegura que cada tarjeta no exceda el 25% del ancho */
 }
 
 .card:hover {
@@ -453,7 +460,3 @@ h3 {
     font-size: 18px;
 }
 
-p {
-    font-size: 14px;
-    color: #666;
-}

@@ -13,7 +13,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 40px; /* Aumentar el espacio entre las columnas */
+    gap: 120px; /* Aumentar el espacio entre las columnas */
 }
 
 .form-section, .info-section {
