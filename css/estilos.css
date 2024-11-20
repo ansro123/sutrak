@@ -4,7 +4,6 @@ body, html {
     padding: 0;
     font-family: 'Host Grotesk', sans-serif;
     overflow-x: hidden;
-    font-size: 20px;
 }
 
 header, footer {
@@ -23,7 +22,7 @@ h2, h3 {
 p {
     text-align: left; 
 }
-}
+
 
 ul {
     list-style-type: disc;
@@ -53,49 +52,46 @@ li {
 }
 
 .intro-content {
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 60px;
-    border-radius: 10px;
-    color: #000;
-    backdrop-filter: blur(5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.519);
+    color: #ffffff;
+    font-size: 53px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 /* menu */
 
-#menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 20px;
-    position: fixed;
-    top: 0;
+#menu {
+    background-color: #150070; 
     width: 100%;
-    z-index: 1000;
+    height: 75px;
+    position: fixed;
     display: flex;
+    opacity: 0.9;
+    z-index: 1000;
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease;
-    opacity: 0.9;
+}
+
+#menu ul {
+    list-style: none;
 
 }
 
-/* items del menu */
-
-#menu ul li {
-    background-color: #2e518b;
-}
 
 /* enlaces del menu */
 
-#menu ul a {
+#menu a {
     display: block;
     color: #fff;
     text-decoration: none;
     font-weight: 400;
     font-size: 15px;
     padding: 20px;
-    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    letter-spacing: 1px;
     font-size: 1rem;
 }
 
@@ -129,7 +125,8 @@ li {
 
 #menu ul ul li {
     float: none;
-    width: 150px
+    width: 165px;
+    background-color: #000000;
 }
 
 /* enlaces de los items del menu desplegable */
@@ -170,46 +167,26 @@ li {
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-
-
-
-
-
-
-
-
 .parallax.visible .content {
     opacity: 1;
     transform: translateY(0);
 }
 
 /* Colores de fondo para cada sección */
-#presentacion {
+#servicios {
     background-color: #6757c2;
 }
 
-#introduccion {
+#portafolio {
     background-color: #2e0465;
 }
 
-#objetivos {
+#testimonios {
     background-color: #6757c2;
 }
 
-#estrategias {
+#contactenos {
     background-color: #2e0465;
-}
-
-#pregunta {
-    background-color: #6757c2;
-}
-
-#conclusiones {
-    background-color: #2e0465;
-}
-
-#bibliografia {
-    background-color: #6757c2;
 }
 
 #mision {
@@ -228,10 +205,86 @@ li {
     background-color: #2e0465;
 }
 
-#bibliografia {
-    text-align: left; 
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    #menu {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #menu ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #menu ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .intro-content {
+        font-size: 40px; /* Ajustar tamaño de fuente para pantallas más pequeñas */
+    }
+
+    .content {
+        max-width: 90%; /* Reducir el ancho máximo para pantallas pequeñas */
+    }
 }
 
+@media (max-width: 480px) {
+    .intro-content {
+        font-size: 30px; /* Ajustar aún más el tamaño de fuente */
+    }
 
+    #menu a {
+        padding: 15px; /* Reducir el padding para pantallas muy pequeñas */
+    }
+}
+
+/* Estilos para el botón del menú */
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+}
+
+/* Mostrar el botón del menú en pantallas pequeñas */
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block;
+    }
+
+    #menu {
+        display: none; /* Ocultar el menú por defecto */
+        flex-direction: column;
+        width: 100%;
+        background-color: #150070;
+        overflow: hidden; /* Asegura que el contenido no se desborde */
+        transition: max-height 0.9s ease-in-out; /* Transición para la altura */
+        max-height: 0; /* Altura inicial cerrada */
+    }
+
+    #menu.active {
+        display: flex; /* Mostrar el menú cuando esté activo */
+        max-height: 500px; /* Ajusta este valor según el contenido */
+    }
+
+    #menu ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #menu ul li {
+        width: 100%;
+        text-align: center;
+    }
+}
 
 

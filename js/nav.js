@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('.parallax');
     const navbar = document.getElementById('menu');
+    const menuToggle = document.getElementById('menu-toggle');
 
     // Desplazamiento suave al hacer clic en el menú
     document.querySelectorAll('#menu a').forEach(anchor => {
@@ -13,6 +14,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 top: targetSection.offsetTop,
                 behavior: 'smooth'
             });
+
+            // Ocultar el menú después de hacer clic en un enlace
+            if (window.innerWidth <= 768) {
+                navbar.classList.remove('active');
+            }
         });
     });
 
@@ -34,9 +40,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Cambiar el color de fondo del navbar al hacer scroll
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
-            navbar.style.backgroundColor = '#444'; // Cambia el color al hacer scroll
+            navbar.style.backgroundColor = '#2e02f3'; // Cambia el color al hacer scroll
         } else {
-            navbar.style.backgroundColor = '#333'; // Color original
+            navbar.style.backgroundColor = '#150070'; // Color original
         }
+    });
+
+    // Alternar visibilidad del menú en pantallas pequeñas
+    menuToggle.addEventListener('click', function() {
+        navbar.classList.toggle('active');
     });
 });
