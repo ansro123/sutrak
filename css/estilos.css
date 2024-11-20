@@ -169,14 +169,13 @@ li {
 }
 
 /* Colores de fondo para cada sección */
-#servicios {
+#monitoreo {
     background-color: #2e0465;
 }
 
-#portafolio {
+#gestion {
     background-color: #fff;
 }
-
 
 
 #contactenos {
@@ -187,11 +186,11 @@ li {
     background-color: #2e0465;
 }
 
-#vision {
+#contador {
     background-color: #ffffff;
 }
 
-#principios {
+#mantenimiento {
     background-color: #2e0465;
 }
 
