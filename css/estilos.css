@@ -198,6 +198,10 @@ li {
     background-color: #fff;
 }
 
+#iarti {
+    background-color: #2e0465;
+}
+
 /* Media Queries para responsividad */
 @media (max-width: 768px) {
     #menu {
@@ -405,9 +409,37 @@ li {
 
 
 
+.hero {
+    background-image: url('../img/ice.jpg'); /* Cambia la ruta a tu imagen */
+    background-size: cover;
+    background-position: center;
+    height: 50vh; /* Ajusta la altura según tus necesidades */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
 
+.hero h1 {
+    font-size: 4rem; /* Ajusta el tamaño de la fuente */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
 
+.hero p {
+    font-size: 1.5rem; /* Ajusta el tamaño de la fuente */
+    display: flex;
+    align-items: center;
+}
 
+.hero i {
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+    font-size: 1.5rem; /* Tamaño del ícono */
+    color: #00aaff; /* Color del ícono */
+}
 
 
 
@@ -459,3 +491,39 @@ h3 {
     font-size: 18px;
 }
 
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: calc(25% - 40px);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+
+.text-content h2 {
+    margin: 10px 0;
+}
+
+.text-content p {
+    font-size: 14px;
+    color: #555;
+}
